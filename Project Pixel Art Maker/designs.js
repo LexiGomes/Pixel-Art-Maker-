@@ -1,7 +1,6 @@
 // Select color input
 // Select size input
 var size = document.getElementById('sizePicker')
-var color = document.getElementById('colourPicker').value;
 
 // When size is submitted by the user, call makeGrid()
 size.addEventListener('submit', function (event){
@@ -24,6 +23,7 @@ function makeGrid(x, y) {
     // Adding colour to cell
     
     $('td').click(function addColour() {
+        var color = document.getElementById('colourPicker').value;
         if ($(this).attr('style')) {
             $(this).removeAttr('style')
         } else {
